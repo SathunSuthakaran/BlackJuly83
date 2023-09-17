@@ -1,0 +1,2446 @@
+/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.text-lg {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.text-xl {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+
+
+/*LANDING PAGE CSS*/ 
+.Navtext {
+  color: #FFF;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.Navbutton {
+  display: inline-flex;
+  height: 91px;
+  padding: 21px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.BlackJulyInfoBox {
+  width: 1512px;
+  height: 674px;
+  flex-shrink: 0;
+}
+
+.bj-image-container {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  top: -125px;
+}
+
+.bj-image {
+  display: block;
+  max-width: 100%;
+  width: 1512px;
+  height: 674px;
+}
+
+.bj-image-text,
+.bj-image-text-2,
+.bj-image-text-3 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Imbue;
+  font-weight: 700;
+}
+
+.bj-image-text {
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -140%);
+}
+
+.bj-image-text-2 {
+  color: black;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -240%);
+}
+
+.bj-image-text-3 {
+  color: white;
+  padding: 1rem;
+  background-color: black;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  font-size: 1.5rem; 
+}
+.bj-image-text-3:hover {
+  opacity: 0.8;
+}
+.kv-image-container {
+  position: relative;
+  display: flex;
+}
+
+
+.kv-image {
+  display: block;
+  max-width: 100%;
+  width: 1512px;
+  height: 770px;
+}
+
+.kv-image-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-6%, -30%);
+  color: white;
+  font-family: Imbue;
+  display: flex;
+  width: rem;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  /*font-size: 100px;*/
+  font-size: calc(20px + 8vw);
+  line-height: 1.15;
+}
+.kv-image-text-sub { 
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-6%, 150%);
+  color: white;
+  font-family: Imbue;
+  display: flex;
+  width: rem;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  /*font-size: 28px;*/
+  font-size: calc(12px + 1.4vw);
+}
+
+.survivor-text{
+  font-size: 50px;
+  justify-content: center;
+  font-family: Imbue;
+  text-align: center;
+}
+
+.ViewMore1 {
+  text-align: center;
+  font-size: 80px;
+  font-family: Imbue;
+  transform: translate(0%, 50%)
+}
+
+.ViewMore1:hover {
+  opacity: 0.7
+}
+
+.grid-container {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  grid-gap: 3rem; /* Gap between grid items */
+}
+
+.grid-item {
+  background-color: lightgray;
+  padding: 30px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item img:hover {
+  opacity: 0.7;
+}
+.grid-item .caption {
+  font-size: 20px;
+  font-weight: bold;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translate(0%, -20%);
+  background-color: black(0, 0, 0, 0.7);
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+/*
+.hover-content {
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+*/
+.grid-item:hover .hover-content {
+  opacity: 1;
+} 
+
+.Logo {
+  height: 50px;
+  width: auto;
+  transform: translate(0%, -15%);
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Navbutton {
+  display: inline-flex;
+  height: 91px;
+  padding: 21px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/*.Navtext {
+  
+  color: #ffffff;
+  font-family: white;
+}*/
+.carousel-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 400%; /* Three images side by side to fill the screen width */
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide img {
+  flex: 1; /* Each image takes an equal amount of space */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  padding: 3rem;
+  display: flex;
+  /*width: 1263px;
+  height: 150px;*/
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: black;
+}
+footer img.BJTitle{
+  width: 40%;
+}
+.BJ83-title {
+  width: 100px;
+  height: 70px; 
+}
+
+/*LANDING PAGE CSS ENDS*/
+
+/*BLACKJULY PAGE CSS*/
+
+.BJ-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.BJPG-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-basis: 100%;
+}
+.BJPG {
+  width: 1000px;
+  height: 560px;
+
+}
+.BJPG-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.57);
+  top: 50%;
+  left: 45%;
+  transform: translate(-20%, -40%);
+  color: white;
+  font-family: Imbue;
+  display: flex;
+  width: 340px;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 70px;
+  text-align: center;
+}
+
+
+.BJ-box1 {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #D9D9D9;
+  padding-top: 20px;
+  /*top: 100%;
+  left: 50%;
+  transform: translate(40%, 10%);*/
+  padding-left: 15px;
+  margin-bottom: 0;
+  flex-basis: 45%;
+  margin-left: 2rem;
+  justify-content: center;
+}
+.BJ-Header {
+  color: black;
+  font-size: 36px;
+  font-family: Imbue;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.BJ-paragraphs {
+  font-family: Roboto;
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+
+
+.BJ-box2 {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #D9D9D9;
+  padding-top: 20px;
+ /* top: 100%;
+  left: 100%;
+  transform: translate(177%, -90%); */
+  padding-left: 15px;
+  margin-bottom: 0;
+  flex-basis: 45%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem  ;
+}
+
+.Timeline-Title {
+  font-size: 60px;
+  font-family: Imbue;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.Timeline-Item {
+  font-size: 30px;
+  font-family: Imbue;
+  font-weight: 200;
+}
+
+.vertical-line {
+  width: 3px;
+  height: 700px; 
+  background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.timeline {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.timeline-icon {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.timeline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-title {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold; 
+  color: black;
+}
+
+.timeline-description {
+  margin-top: 10px;
+  margin-right: 30px;
+  color: black;
+}
+
+
+/*BLACKJULY PAGE CSS ENDS*/
+
+/*VIDEOS PAGE CSS*/
+
+
+.bottom-vids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 8.2rem;
+  padding-bottom: 2rem;
+}
+.Vids {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  align-content: center;
+  justify-items: center;
+}
+.vid-item {
+  background-color: lightgray;
+  padding: 20px;
+  height: 50vh;
+  width: 40vw;
+}
+
+.vid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OtherVidTitle {
+  font-size: 25px;
+  font-family: Imbue;
+  color: black;
+  text-align: center;
+}
+.Texts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.OtherVidtext1 {
+  font-size: 25px;
+  font-family: Imbue;
+  color: black;
+  padding-right: 30rem;
+}
+.OtherVidtext2 {
+  font-size: 25px;
+  font-family: Imbue;
+  color: black;
+  text-align: right;
+}
+
+
+
+/*VIDEOS PAGE CSS ENDS*/
+
+/*CONTACT PAGE CSS*/
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  margin-top: 1rem;
+}
+
+/*
+.Phone {
+  font-family: Imbue;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D9D9D9;
+  height: 120px;
+  width: 150px;
+  transform: translate(122%, 65%);
+  text-align: center;
+}
+
+.Address {
+  font-family: Imbue;
+  height: 120px;
+  width: 150px;
+  background-color: #D9D9D9;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(254%, -35%);
+}
+
+.Socials {
+  font-family: Imbue;
+  height: 120px;
+  width: 350px;
+  background-color: #D9D9D9;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(52%, -20%); 
+}
+*/
+.half {
+  flex-basis: 50%;
+}
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* Additional styles for the container */
+}
+
+.ctclogo {
+  height: 130px;
+  width: auto;
+  grid-row: 1;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.Phone {
+  grid-row: 2;
+  grid-column:1;
+  font-family: Imbue;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D9D9D9;
+  height: 120px;
+  width: 260px;
+  text-align: center;
+  text-decoration: underline;
+  
+  /* Additional styles for item 1 */
+}
+
+.Socials {
+  grid-row: 2;
+  grid-column: 2;
+  font-family: Imbue;
+  height: 120px;
+  width: 260px;
+  background-color: #D9D9D9;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  /* Additional styles for item 2 */
+}
+
+.Address {
+  grid-row: 3;
+  font-family: Imbue;
+  height: 130px;
+  width: auto;
+  background-color: #D9D9D9;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  /* Additional styles for item 3 */
+}
+
+.big-box {
+  position:relative;
+  height: 400px;
+  width: 450px;
+  background-color: #D9D9D9;
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+} 
+.Message {
+  font-family: Imbue;
+  font-size: 60px;
+}
+.firstname {
+  font-size: 30px;
+  font-family: Imbue;
+}
+.submessage {
+  font-family: Roboto;
+  font-size: 30px;
+  padding-bottom: 2rem;
+}
+.submit {
+  font-weight: bold;
+  justify-self: center;
+  align-self: center;
+  font-size: 30px;
+  font-family: Roboto;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.textbox {
+  font-size: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.bsinput {
+  height: 3rem;
+  width: 30rem;
+  padding-left: 1rem;
+}
+
+
+/* HISTORY PAGE CSS STARTS */
+.map {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  padding-right: 1rem;
+}
+
+.H-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.H-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-basis: 100%;
+}
+.HPG {
+  width: 1000px;
+  height: 560px;
+
+}
+.H-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.57);
+  top: 50%;
+  left: 45%;
+  transform: translate(-20%, -40%);
+  color: white;
+  font-family: Imbue;
+  display: flex;
+  width: 340px;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 70px;
+  text-align: center;
+}
+
+
+.H-box1 {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #D9D9D9;
+  padding-top: 20px;
+  /*top: 100%;
+  left: 50%;
+  transform: translate(40%, 10%);*/
+  padding-left: 15px;
+  margin-bottom: 0;
+  flex-basis: 45%;
+  margin-left: 2rem;
+  justify-content: center;
+}
+.H-Header {
+  color: black;
+  font-size: 36px;
+  font-family: Imbue;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.H-paragraphs { 
+  font-family: Roboto;
+  /*font-size: 15.5px;*/
+  font-size: .8rem;
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+.H-box2 {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #D9D9D9;
+  padding-top: 20px;
+ /* top: 100%;
+  left: 100%;
+  transform: translate(177%, -90%); */
+  padding-left: 15px;
+  margin-bottom: 0;
+  flex-basis: 45%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+/*Gallery*/
+
+/*.photo-row {
+  display: grid;
+  justify-content: space-between;
+  height: 20rem;
+  flex-shrink: 0;
+}
+
+.photos {
+  flex-basis: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo1 {
+  margin-left: 5rem;
+}
+
+.photo3 {
+  margin-right: 5rem;
+}
+
+.photos img {
+  max-width: 100%;
+  max-height: 100%;
+}*/
+
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* Adjust the gap size as desired */
+  margin-bottom: 1rem;
+}
+
+  .photo1{
+    width: 25rem;
+    height: auto;
+  }
+
+  .photo2 {
+    width: 25rem;
+    height: auto;
+  }
+
+  .photo3 {
+    width: 25rem;
+    height: auto;
+  }
+
+
+.Event-title {
+  font-family: Imbue;
+  font-size: 50px;
+  margin-left: 1rem;
+  color: white;
+}
+/*.viewmore {
+  font-family: Imbue;
+  font-size: 30px;
+  transform: translate(1100%, 0%);
+  color: black;
+  width: 6rem;
+  height: 3rem;
+  background-color: white;
+  text-align: center;
+}*/
+
+
+
+/* CSS */
+.viewmore {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  display: inline-block;
+    font-family: Imbue;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  transform: translate(800%, 0%);
+}
+
+.viewmore:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+
+
+.row-g {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-g {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column-g img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.column-g img:hover {
+  opacity: 0.8;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/*SURVIVOR STORY CSS*/
+
+.survivor-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.survivor-image-container {
+  width: 200px; /* Adjust the width and height as needed */
+  height: 200px;
+  border-radius: 50%; /* This creates the circular shape */
+  overflow: hidden; /* This hides any part of the image that exceeds the circular container */
+}
+
+.survivor-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the circular container without stretching */
+}
+
+.survivor-name {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.survivor-paragraph {
+  font-size: calc(10px + 1vw);
+  font-family: Roboto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 2rem;
+}
+
+}
+
+
+  
+@media (max-width: 1200px) {
+  
+  /*LANDING PAGE CSS*/ 
+  .Navtext {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-family: Jost;
+    text-transform: uppercase;
+  }
+  
+  .Navbutton {
+    display: inline-flex;
+    height: 91px;
+    padding: 21px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  
+  .BlackJulyInfoBox {
+    width: 1512px;
+    height: 674px;
+    flex-shrink: 0;
+  }
+  
+  .bj-image-container {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    top: -125px;
+  }
+  
+  .bj-image {
+    display: block;
+    max-width: 100%;
+    width: 1512px;
+    height: 674px;
+  }
+  
+  .bj-image-text,
+  .bj-image-text-2,
+  .bj-image-text-3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: Imbue;
+    font-weight: 700;
+  }
+  
+  .bj-image-text {
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bj-image-text-2 {
+    color: black;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bj-image-text-3 {
+    color: white;
+    padding: 1rem;
+    background-color: black;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .kv-image-container {
+    position: relative;
+    display: flex;
+  }
+  
+  
+  .kv-image {
+    display: block;
+    max-width: 100%;
+    width: 1512px;
+    height: 100%;
+  }
+  
+  .kv-image-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-6%, -30%);
+    color: white;
+    font-family: Imbue;
+    display: flex;
+    width: rem;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    /*font-size: 100px;*/
+    font-size: calc(20px + 8vw);
+    line-height: 1.15;
+  }
+  .kv-image-text-sub { 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-6%, 150%);
+    color: white;
+    font-family: Imbue;
+    display: flex;
+    width: rem;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    /*font-size: 28px;*/
+    font-size: calc(12px + 1.4vw);
+  }
+  
+  .survivor-text{
+    font-size: 50px;
+    justify-content: center;
+    font-family: Imbue;
+    text-align: center;
+  }
+  
+  .ViewMore1 {
+    text-align: center;
+    font-size: 80px;
+    font-family: Imbue;
+    transform: translate(0%, 50%)
+  }
+  
+  .ViewMore1:hover {
+    opacity: 0.7
+  }
+  
+  .grid-container {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    grid-gap: 3rem; /* Gap between grid items */
+  }
+  
+  .grid-item {
+    background-color: lightgray;
+    padding: 30px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-item img:hover {
+    opacity: 0.7;
+  }
+  .grid-item .caption {
+    font-size: 15px;
+    font-weight: bold;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translate(0%, -21%);
+    background-color: black(0, 0, 0, 0.7);
+    color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  /*
+  .hover-content {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+  }
+  */
+  .grid-item:hover .hover-content {
+    opacity: 1;
+  } 
+  
+  .Logo {
+    height: 50px;
+    width: auto;
+    transform: translate(0%, -15%);
+  }
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .Navbutton {
+    display: inline-flex;
+    height: 91px;
+    padding: 21px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  
+  .Navtext {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: white;
+  }
+  
+  footer {
+    display: flex;
+    /*width: 1263px;
+    height: 150px;*/
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: black;
+    padding: 3rem;
+  }
+  
+  .BJ83-title {
+    width: 200px;
+    height: 70px;
+  }
+  
+  /*LANDING PAGE CSS ENDS*/
+  
+  /*BLACKJULY PAGE CSS*/
+  
+  .BJ-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  
+  .BJPG-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-basis: 100%;
+  }
+  .BJPG {
+    width: 1000px;
+    height: 560px;
+  
+  }
+  .BJPG-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.57);
+    top: 50%;
+    left: 45%;
+    transform: translate(-20%, -40%);
+    color: white;
+    font-family: Imbue;
+    display: flex;
+    width: 340px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 70px;
+    text-align: center;
+  }
+  
+  
+  .BJ-box1 {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    padding-top: 20px;
+    /*top: 100%;
+    left: 50%;
+    transform: translate(40%, 10%);*/
+    padding-left: 15px;
+    margin-bottom: 0;
+    flex-basis: 45%;
+    margin-left: 2rem;
+    justify-content: center;
+  }
+  .BJ-Header {
+    color: black;
+    font-size: 36px;
+    font-family: Imbue;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  .BJ-paragraphs {
+    font-family: Roboto;
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+  
+  
+  
+  .BJ-box2 {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    padding-top: 20px;
+   /* top: 100%;
+    left: 100%;
+    transform: translate(177%, -90%); */
+    padding-left: 15px;
+    margin-bottom: 0;
+    flex-basis: 45%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem  ;
+  }
+  
+  .Timeline-Title {
+    font-size: 60px;
+    font-family: Imbue;
+    text-align: center;
+    margin-top: 0;
+    font-weight: 400;
+  }
+  
+  .Timeline-Item {
+    font-size: 30px;
+    font-family: Imbue;
+    font-weight: 200;
+  }
+  
+  .vertical-line {
+    width: 3px;
+    height: 700px; 
+    background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .timeline {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-icon {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .timeline-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .timeline-content {
+    flex: 1;
+  }
+  
+  .timeline-title {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold; 
+  }
+  
+  .timeline-description {
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  
+  
+  /*BLACKJULY PAGE CSS ENDS*/
+  
+  /*VIDEOS PAGE CSS*/
+  
+  .vid-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.57);
+    color: white;
+    font-family: Imbue;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  
+  .bottom-vids {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    
+    gap: 2rem;
+    padding: 2rem, 0;
+  }
+  .Vids {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .vid-item {
+    background-color: lightgray;
+    padding: 20px;
+    width: 100vw;
+    height: 65vw;
+
+  }
+  
+  .vid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .OtherVidTitle {
+    font-size: 25px;
+    font-family: Imbue;
+    color: black;
+    text-align: center;
+  }
+  .Texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .OtherVidtext1 {
+    font-size: 25px;
+    font-family: Imbue;
+    color: black;
+    padding-right: 30rem;
+  }
+  .OtherVidtext2 {
+    font-size: 25px;
+    font-family: Imbue;
+    color: black;
+    text-align: right;
+  }
+  
+  
+  
+  /*VIDEOS PAGE CSS ENDS*/
+  
+  /*CONTACT PAGE CSS*/
+  
+  .contact-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 29rem;
+    margin-top: 1rem;
+  }
+  
+  .half {
+    flex-basis: 100%;
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* Additional styles for the container */
+  }
+  
+  .ctclogo {
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    height: 250px;
+    grid-row: 1;
+  }
+  
+  .container2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .Phone {
+    grid-row: 2;
+    grid-column:1;
+    font-family: Imbue;
+    font-size: calc(42px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    height: 200px;
+    width: 25rem;
+    text-align: center;
+    text-decoration: underline;
+    
+    /* Additional styles for item 1 */
+  }
+  
+  .Address {
+    grid-row: 3;
+    font-family: Imbue;
+    height: 120px;
+    width: auto;
+    background-color: #D9D9D9;
+    font-size: calc(42px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    text-decoration: underline;
+    /* Additional styles for item 2 */
+  }
+  
+  .Socials {
+    grid-row: 2;
+    grid-column: 2;
+    font-family: Imbue;
+    height: 200px;
+    width: 25rem;
+    background-color: #D9D9D9;
+    font-size: calc(40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    /* Additional styles for item 3 */
+  }
+  
+  .big-box {
+    max-width: 100%;
+    position:relative;
+    height: 800px;
+    width: 51rem;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .Message {
+    font-family: Imbue;
+    font-size: 150px;
+  }
+  .firstname {
+    font-size: 60px;
+    font-family: Roboto;
+  }
+  .submessage {
+    font-family: Roboto;
+    font-size: 30px;
+    padding-bottom: 2rem;
+  }
+  .submit {
+    justify-self: center;
+    align-self: center;
+    padding-top: 2rem;
+    font-size: 30px;
+    font-family: Roboto;
+    background-color: black;
+    color: white;
+    width: auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 5rem;
+  }
+  /* HISTORY PAGE CSS STARTS */
+  .map {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    padding-right: 1rem;
+  }
+  
+  .H-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  
+  .H-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 5rem;
+  }
+  .HPG {
+    width: rem;
+    height: auto;
+    text-align: left;
+  
+  }
+  .H-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.57);
+    top: 50%;
+    left: 45%;
+    transform: translate(-20%, -40%);
+    color: white;
+    font-family: Imbue;
+    display: flex;
+    width:rem;
+    height:auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 70px;
+    text-align: center;
+  }
+  
+  
+  .H-box1 {
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    padding-top: 20px;
+    text-align: center;
+    align-self: center;
+    /*top: 100%;
+    left: 50%;
+    transform: translate(40%, 10%);*/
+    padding-left: 15px;
+    margin-bottom: 2rem;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .H-Header {
+    color: black;
+    font-size: 7rem;
+    font-family: Imbue;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  .H-paragraphs { 
+    font-family: Roboto;
+    /*font-size: 15.5px;*/
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .H-box2 {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    padding-top: 20px;
+   /* top: 100%;
+    left: 100%;
+    transform: translate(177%, -90%); */
+    padding-left: 15px;
+    margin-bottom: 0;
+    flex-basis: 100%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+  }
+  
+  /*Gallery*/
+  
+  /*.photo-row {
+    display: grid;
+    justify-content: space-between;
+    height: 20rem;
+    flex-shrink: 0;
+  }
+  
+  .photos {
+    flex-basis: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photo1 {
+    margin-left: 5rem;
+  }
+  
+  .photo3 {
+    margin-right: 5rem;
+  }
+  
+  .photos img {
+    max-width: 100%;
+    max-height: 100%;
+  }*/
+  
+  .photo-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; /* Adjust the gap size as desired */
+    margin-bottom: 1rem;
+  }
+  
+  .photo1{
+    width: 35rem;
+    height: auto;
+  }
+  
+  .photo2 {
+    width: 35rem;
+    height: auto;
+  }
+  
+  .photo3 {
+    width: 35rem;
+    height: auto;
+  }
+  
+  .Event-title {
+    font-family: Imbue;
+    font-size: 50px;
+    margin-left: 1rem;
+    color: white;
+  }
+  .viewmore {
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    display: inline-block;
+      font-family: Imbue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    transform: translate(600%, 0%);
+  }
+  
+  .viewmore:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  
+  .row-g {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column-g {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column-g img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: pixelated;
+      -ms-interpolation-mode: nearest-neighbor;
+  }
+  
+  .column-g img:hover {
+    opacity: 0.8;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+    .column-g {
+      flex: 50%;
+      max-width: 50%;
+    }
+  /*SURVIVOR STORY CSS*/
+  
+  .survivor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  
+  .survivor-image-container {
+    width: 400px; /* Adjust the width and height as needed */
+    height: 400px;
+    border-radius: 50%; /* This creates the circular shape */
+    overflow: hidden; /* This hides any part of the image that exceeds the circular container */
+  }
+  
+  .survivor-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the circular container without stretching */
+  }
+  
+  .survivor-name {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: calc(40px + 0.75vw);
+    font-weight: bold;
+  }
+  
+  .survivor-paragraph {
+    font-size: calc(20px + 0.75vw);
+    font-family: Roboto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
